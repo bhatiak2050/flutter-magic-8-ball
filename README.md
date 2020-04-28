@@ -2,6 +2,10 @@
 
 A magical 8 ball app, built using Flutter. It will give you the answers to all the tricky questions in life. You can make the ball change at the press of a button. 
 
+## Final Product
+
+![Finished App](https://github.com/londonappbrewery/Images/blob/master/8-ball-flutter-gif.gif)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
