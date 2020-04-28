@@ -8,13 +8,19 @@ void main() => runApp(
     );
 
 class BallPage extends StatelessWidget {
+
+  final colors = [Colors.blue, Colors.red, Colors.green, Colors.orange, Colors.pink, Colors.teal, Colors.cyan];
+
   @override
   Widget build(BuildContext context) {
+
+    final color = colors[Random().nextInt(7)];
+
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: color,
       appBar: AppBar(
         title: Text('Ask Me Anything'),
-        backgroundColor: Colors.blue[900],
+        backgroundColor: color[900],
       ),
       body: Ball(),
     );
@@ -38,7 +44,10 @@ class _BallState extends State<Ball> {
           child: Image.asset('images/ball$ballNo.png'),
           onPressed: (){
             setState(() {
-              ballNo = Random().nextInt(5)+1;
+              int temp = Random().nextInt(5)+1;
+              while(temp == ballNo)
+                temp = Random().nextInt(5)+1;
+              ballNo = temp;
             });
           },
         ),
